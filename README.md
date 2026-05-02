@@ -1,13 +1,37 @@
-# chrome-dino-hack
-code to auto run chrome dinosaur game
+# chromedino
+> JavaScript snippet to make Chrome's T-Rex dino game run forever
 
-<p align="left">
-  <img src="https://lh3.googleusercontent.com/YPSZ9e1wW1z7cIyjkpQUqAdMzlgaPprj3_1n9tKesPfYR8U1nlxcsHFk8Dd-1XWa-ymskRLekQ=w640-h400-e365" />
-</p>
+## What it does
+A two-line JavaScript snippet you paste into Chrome DevTools Console. It patches the `Runner.prototype.gameOver` method to do nothing, so the dinosaur never dies. An additional snippet lets you crank up the game speed.
 
-## Disclaimer:
-1. USE AT OWN DISCRETION
-2. FOR EDUCATIONAL PURPOSES ONLY
+## Features
+- Disable game-over (dino never dies)
+- Re-enable normal game-over behavior
+- Set custom game speed (e.g., `1000` for warp speed)
 
-## Instructions:
-1. Copy and paste the code into the console of Chrome
+## Usage
+1. Open Chrome and navigate to `chrome://dino` (or just disconnect your internet)
+2. Open DevTools (`F12` → Console)
+3. Paste to disable game-over:
+```js
+var original = Runner.prototype.gameOver
+Runner.prototype.gameOver = function(){}
+```
+4. To re-enable:
+```js
+Runner.prototype.gameOver = original
+```
+5. To set speed:
+```js
+Runner.instance_.setSpeed(1000)
+```
+
+## Requirements
+- Google Chrome browser (any version with the built-in dino game)
+- No installs needed
+
+## Reference
+Original technique: https://mathewsachin.github.io/blog/2016/11/05/chrome-dino-hack.html
+
+## License
+MIT
