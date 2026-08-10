@@ -34,4 +34,5 @@ Runner.instance_.setSpeed(1000)
 Original technique: https://mathewsachin.github.io/blog/2016/11/05/chrome-dino-hack.html
 
 ## License
-MIT
+
+Apache-2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
