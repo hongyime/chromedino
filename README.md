@@ -1,4 +1,9 @@
 # chromedino
+
+Live demo: https://hongyime.github.io/chromedino/
+
+![Project screenshot](./screenshot.png)
+
 > JavaScript snippet to make Chrome's T-Rex dino game run forever
 
 ## What it does
